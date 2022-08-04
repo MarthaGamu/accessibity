@@ -1,16 +1,14 @@
 
-import Navigation from './components/Navigation'
-import Banner from './components/Banner'
-import Card from './components/Card'
-import Footer from './components/Footer'
-
+import { Routes, Route } from "react-router-dom"
+import Home from './pages/Home'
+import Model from './pages/Model'
 function App() {
   return (
     <div className="App">
-    <Navigation/>
-    <Banner/>
-    <Card/>
-    <Footer/>
+      <Routes>
+        <Route path="/" element={ <Home/> } />
+        <Route path="model" element={ <Model/> } />
+      </Routes>
     </div>
   );
 }

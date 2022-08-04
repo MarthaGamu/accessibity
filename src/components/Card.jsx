@@ -1,6 +1,7 @@
 import React from 'react'
 import Styled from 'styled-components'
 import {data} from '../components/mocks/CardMock'
+import { Link } from 'react-router-dom';
 
 const StyledCardContainer = Styled.div`
  width: 100%;
@@ -17,10 +18,17 @@ const StyledCard = Styled.div`
   background: black;
   color: white;
   text-align: center;
-   img{
-    width: 500px;
-    height: 400px;
-   }
+
+  img{
+  width: 500px;
+  height: 400px;
+  }
+
+  a{
+    color: white;
+    padding-bottom: 10px;
+  }
+   
 `
 
 function Card() {
@@ -29,8 +37,9 @@ function Card() {
         {data.map((item) => {
          return (
           <StyledCard>
-            <img src={item.src} alt='laptop mac '/>
-            <h1>{item.model}</h1>
+            <img src={item.src} alt={item.alt}/>
+            <h2>{item.model}</h2>
+            <Link to="Model" aria-label='Information about the macbook pro'>More info about mac</Link>
           </StyledCard>)
         })}
         
