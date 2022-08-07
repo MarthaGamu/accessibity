@@ -9,15 +9,16 @@ const StyledCardContainer = Styled.div`
  justify-content: space-evenly;
  flex-wrap: wrap;
  margin-top: 20px;
-
-
 `
 const StyledCard = Styled.div`
-  margin-top: 10px;
-  margin-bottom: 15px;
+  margin: 30px 0px 50px;
   background: black;
   color: white;
   text-align: center;
+  border: 2px solid #BEBEBE;
+  padding: 3rem;
+  box-sizing: border-box;
+  
 
   img{
   width: 500px;
@@ -32,11 +33,16 @@ const StyledCard = Styled.div`
 `
 
 function Card() {
+
+  const handleClick = () => {
+    alert('Hello Welcome to our site')
+  }
+
   return (
     <StyledCardContainer>
         {data.map((item) => {
          return (
-          <StyledCard>
+          <StyledCard onClick={handleClick}>
             <img src={item.src} alt={item.alt}/>
             <h2>{item.model}</h2>
             <Link to="Model" aria-label='Information about the macbook pro'>More info about mac</Link>

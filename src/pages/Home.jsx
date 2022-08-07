@@ -4,7 +4,6 @@ import Navigation from '../components/Navigation'
 import Banner from '../components/Banner'
 import Card from '../components/Card'
 import Footer from '../components/Footer'
-import NewUseState from '../components/NewUseState'
 import Heading from '../components/Heading'
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
         <Banner/>
         <Heading/>
         <Card/>
-        <NewUseState name='martha'/>
         <Footer/>
     </div>
   )

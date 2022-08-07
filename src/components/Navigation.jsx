@@ -9,11 +9,22 @@ const StyledNavigation = Styled.nav`
   padding: 2rem 0;
   font-weight: bold;
   width: 100%;
+
+  .logo {
+    font-family: "Sofia", sans-serif;
+    margin-left: 2rem;
+  }
   
-  ul{
+  ul {
     list-style: none;
     padding: 0;
     margin: 0 10rem;
+    display: flex;
+  }
+
+  li:first-child {
+    margin-right: 20px;
+
   }
 
   label{
@@ -25,13 +36,14 @@ const StyledNavigation = Styled.nav`
 export default function Navigation() {
   return (
     <StyledNavigation>
-      <div>Logo</div> 
+      <div className='logo'>MacStar</div> 
        <div className='searchInput'>
         <label for='search'> Search </label>
         <input  id='search' type='text' placeholder='Search' />
       </div>
       <ul>
         <li>Home</li>
+        <li>About</li>
       </ul>
     </StyledNavigation>
   )

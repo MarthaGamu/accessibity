@@ -1,8 +1,14 @@
 import React from 'react'
+import Styled from 'styled-components'
+
+const StyledHeading = Styled.h1`
+font-variant: small-caps;
+text-align: center;
+`
 
 function Heading() {
   return (
-    <h1>MacBook Latest Laptops</h1>
+    <StyledHeading>MacBook Latest Laptops</StyledHeading>
   )
 }
 
