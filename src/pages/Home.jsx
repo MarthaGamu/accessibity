@@ -1,19 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-import Navigation from '../components/Navigation'
-import Banner from '../components/Banner'
-import Card from '../components/Card'
-import Footer from '../components/Footer'
-import Heading from '../components/Heading'
+import Banner from '../components/Banner/Banner';
+import Card from '../components/Card/Card';
+import Heading from '../components/Heading/Heading';
 
 export default function Home() {
-  return (
-    <div> 
-        <Navigation/> 
-        <Banner/>
-        <Heading/>
-        <Card/>
-        <Footer/>
-    </div>
-  )
+	return (
+		<div>
+			<Banner />
+			<Heading />
+			<Card />
+		</div>
+	);
 }
